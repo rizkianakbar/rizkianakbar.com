@@ -45,11 +45,6 @@
   text-align: center;
 }
 
-.menu li a:hover {
-  transform: scale(1.5) translateZ(0);
-  transition: transform 300ms ease;
-}
-
 .menu li a {
   display: block;
   transform: none;
