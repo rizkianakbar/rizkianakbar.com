@@ -1,28 +1,18 @@
-import NextLink from 'next/link';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
 import { useTheme } from 'next-themes';
 import * as React from 'react';
 
-import clsxm from '@/lib/clsxm';
+import StyledLink from '@/components/atoms/StyledLink';
 
 function NavItem({ href, text }: { href: string; text: string }) {
   const router = useRouter();
   const isActive = router.asPath === href;
 
   return (
-    <NextLink href={href}>
-      <a
-        className={clsxm(
-          isActive
-            ? 'font-semibold text-gray-800 dark:text-gray-200'
-            : 'font-normal text-gray-600 dark:text-gray-400',
-          'hidden md:inline-block p-1 sm:px-3 sm:py-2 rounded-lg hover:bg-gray-200 dark:hover:bg-gray-800 transition-all'
-        )}
-      >
-        <span className='capsize'>{text}</span>
-      </a>
-    </NextLink>
+    <StyledLink href={href} isActive={isActive} variant='one'>
+      <span className='capsize'>{text}</span>
+    </StyledLink>
   );
 }
 
