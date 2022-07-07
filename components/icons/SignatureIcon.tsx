@@ -1,4 +1,10 @@
-const SignatureIcon = () => (
+import clsxm from '@/lib/clsxm';
+
+interface IProps {
+  className?: string;
+}
+
+const SignatureIcon = ({ className }: IProps) => (
   <svg
     version='1.0'
     xmlns='http://www.w3.org/2000/svg'
@@ -6,6 +12,7 @@ const SignatureIcon = () => (
     height='60.000000pt'
     viewBox='0 0 123.000000 60.000000'
     preserveAspectRatio='xMidYMid meet'
+    className={clsxm(className, 'inline opacity-70')}
   >
     <g
       transform='translate(0.000000,60.000000) scale(0.100000,-0.100000)'
