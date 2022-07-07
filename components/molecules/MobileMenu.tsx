@@ -1,10 +1,11 @@
-import Link from 'next/link';
 import { useEffect, useState } from 'react';
 import useDelayedRender from 'use-delayed-render';
 
 import styles from 'styles/mobile-menu.module.css';
 
 import clsxm from '@/lib/clsxm';
+
+import StyledLink from '@/components/atoms/StyledLink';
 
 export default function MobileMenu() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -51,37 +52,41 @@ export default function MobileMenu() {
             isMenuRendered && styles.menuRendered
           )}
         >
-          <li
-            className=' dark:border-gray-700 text-gray-900 dark:text-gray-100 text-xl font-bold'
-            style={{ transitionDelay: '150ms' }}
-          >
-            <Link href='/'>
-              <a className='flex w-auto'>Home</a>
-            </Link>
+          <li style={{ transitionDelay: '150ms' }}>
+            <StyledLink
+              variant='two'
+              href='/'
+              className='dark:border-gray-700 text-gray-900 dark:text-gray-100 text-xl font-bold'
+            >
+              Home
+            </StyledLink>
           </li>
-          <li
-            className=' dark:border-gray-700 text-gray-900 dark:text-gray-100 text-xl font-bold'
-            style={{ transitionDelay: '175ms' }}
-          >
-            <Link href='/about'>
-              <a className='flex w-auto'>About</a>
-            </Link>
+          <li style={{ transitionDelay: '175ms' }}>
+            <StyledLink
+              variant='two'
+              href='/about'
+              className='dark:border-gray-700 text-gray-900 dark:text-gray-100 text-xl font-bold'
+            >
+              About
+            </StyledLink>
           </li>
-          <li
-            className=' dark:border-gray-700 text-gray-900 dark:text-gray-100 text-xl font-bold'
-            style={{ transitionDelay: '200ms' }}
-          >
-            <Link href='/project'>
-              <a className='flex w-auto'>Project</a>
-            </Link>
+          <li style={{ transitionDelay: '200ms' }}>
+            <StyledLink
+              variant='two'
+              className='dark:border-gray-700 text-gray-900 dark:text-gray-100 text-xl font-bold'
+              href='/project'
+            >
+              Project
+            </StyledLink>
           </li>
-          <li
-            className=' dark:border-gray-700 text-gray-900 dark:text-gray-100 text-xl font-bold'
-            style={{ transitionDelay: '250ms' }}
-          >
-            <Link href='/blog'>
-              <a className='flex w-auto'>Blog</a>
-            </Link>
+          <li style={{ transitionDelay: '250ms' }}>
+            <StyledLink
+              variant='two'
+              className='dark:border-gray-700 text-gray-900 dark:text-gray-100 text-xl font-bold'
+              href='/blog'
+            >
+              Blog
+            </StyledLink>
           </li>
         </ul>
       )}
