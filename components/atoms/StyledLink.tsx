@@ -21,22 +21,6 @@ export default function StyledLink({
   ...rest
 }: StyledLinkProps) {
   return (
-    // <UnstyledLink
-    //   {...rest}
-    //   className={clsx(
-    //     'inline-flex rounded px-4 py-2 font-bold',
-    //     variant === 'one' ? 'hover:bg-gray-200 dark:hover:bg-gray-800' : '',
-    //     'focus:outline-none focus-visible:ring focus-visible:ring-primary-300',
-    //     'scale-100 hover:scale-[1.5] active:scale-[0.97] motion-safe:transform-gpu',
-    //     'motion-reduce:hover:scale-400 motion-reduce:hover:brightness-90',
-    //     'transition duration-100',
-    //     'animate-shadow',
-
-    //     className
-    //   )}
-    // >
-    //   {children}
-    // </UnstyledLink>
     <UnstyledLink
       {...rest}
       className={clsx(
