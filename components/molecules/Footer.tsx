@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import * as React from 'react';
 
 import GithubIcon from '@/components/icons/GithubIcon';
 import LinkedinIcon from '@/components/icons/LinkedinIcon';
@@ -26,7 +27,7 @@ export default function Footer() {
   return (
     <footer className='flex flex-col justify-center items-start max-w-2xl mx-auto w-full mb-8'>
       <hr className='w-full border-1 border-gray-200 dark:border-gray-800 mb-8' />
-      <div className='w-full max-w-2xl grid grid-cols-3 pb-16 sm:grid-cols-4 gap-0 md:gap-4'>
+      <div className='w-full max-w-2xl grid grid-cols-3 pb-16 sm:grid-cols-4 gap-4'>
         <div className='sm:flex flex-col hidden sm:visible'>
           <SignatureIcon />
         </div>
@@ -51,19 +52,19 @@ export default function Footer() {
 
         <div className='flex flex-col space-y-4 sm:pl-[30%]'>
           <ExternalLink href='https://github.com/rizkianakbar'>
-            <GithubIcon />
+            <GithubIcon className='hidden sm:inline' />
             GitHub
           </ExternalLink>
           <ExternalLink href='https://twitter.com/rizkianakbr'>
-            <TwitterIcon />
+            <TwitterIcon className='hidden sm:inline' />
             Twitter
           </ExternalLink>
           <ExternalLink href='https://www.linkedin.com/in/rizkianakbar/'>
-            <LinkedinIcon />
+            <LinkedinIcon className='hidden sm:inline' />
             LinkedIn
           </ExternalLink>
         </div>
-        <div className='flex flex-col space-y-4 sm:pl-[30%]'>
+        <div className='flex flex-col space-y-4 sm:pl-[30%] '>
           <ExternalLink href='https://quranmemo.vercel.app'>
             QuranMemo
           </ExternalLink>
