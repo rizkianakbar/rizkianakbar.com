@@ -1,27 +1,10 @@
-import Link from 'next/link';
 import * as React from 'react';
 
+import StyledLink from '@/components/atoms/StyledLink';
 import GithubIcon from '@/components/icons/GithubIcon';
 import LinkedinIcon from '@/components/icons/LinkedinIcon';
 import SignatureIcon from '@/components/icons/SignatureIcon';
 import TwitterIcon from '@/components/icons/TwitterIcon';
-
-const ExternalLink = ({
-  href,
-  children,
-}: {
-  href: string;
-  children: React.ReactNode;
-}) => (
-  <a
-    className='text-gray-500 hover:text-gray-600 transition'
-    target='_blank'
-    rel='noopener noreferrer'
-    href={href}
-  >
-    {children}
-  </a>
-);
 
 export default function Footer() {
   return (
@@ -31,46 +14,39 @@ export default function Footer() {
         <div className='sm:flex flex-col hidden sm:visible'>
           <SignatureIcon />
         </div>
+
         <div className='flex flex-col space-y-4 sm:pl-[30%]'>
-          <Link href='/'>
-            <a className='text-gray-500 hover:text-gray-600 transition'>Home</a>
-          </Link>
-          <Link href='/about'>
-            <a className='text-gray-500 hover:text-gray-600 transition'>
-              About
-            </a>
-          </Link>
-          <Link href='/project'>
-            <a className='text-gray-500 hover:text-gray-600 transition'>
-              Project
-            </a>
-          </Link>
-          <Link href='/blog'>
-            <a className='text-gray-500 hover:text-gray-600 transition'>Blog</a>
-          </Link>
+          <StyledLink href='/'>Home</StyledLink>
+          <StyledLink href='/about'>About</StyledLink>
+          <StyledLink href='/project'> Project</StyledLink>
+          <StyledLink href='/blog'>Blog</StyledLink>
         </div>
 
         <div className='flex flex-col space-y-4 sm:pl-[30%]'>
-          <ExternalLink href='https://github.com/rizkianakbar'>
+          <StyledLink openNewTab href='https://github.com/rizkianakbar'>
             <GithubIcon className='hidden sm:inline' />
             GitHub
-          </ExternalLink>
-          <ExternalLink href='https://twitter.com/rizkianakbr'>
+          </StyledLink>
+          <StyledLink openNewTab href='https://twitter.com/rizkianakbr'>
             <TwitterIcon className='hidden sm:inline' />
             Twitter
-          </ExternalLink>
-          <ExternalLink href='https://www.linkedin.com/in/rizkianakbar/'>
+          </StyledLink>
+          <StyledLink
+            openNewTab
+            href='https://www.linkedin.com/in/rizkianakbar'
+          >
             <LinkedinIcon className='hidden sm:inline' />
             LinkedIn
-          </ExternalLink>
+          </StyledLink>
         </div>
+
         <div className='flex flex-col space-y-4 sm:pl-[30%] '>
-          <ExternalLink href='https://quranmemo.vercel.app'>
+          <StyledLink openNewTab href='https://quranmemo.vercel.app'>
             QuranMemo
-          </ExternalLink>
-          <ExternalLink href='https://github.com/rizkianakbar'>
+          </StyledLink>
+          <StyledLink openNewTab href='https://github.com/rizkianakbar'>
             Galen
-          </ExternalLink>
+          </StyledLink>
         </div>
       </div>
     </footer>
