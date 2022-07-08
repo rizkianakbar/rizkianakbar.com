@@ -1,4 +1,4 @@
-import clsxm from '@/lib/clsxm';
+import clsx from 'clsx';
 
 interface IProps {
   className?: string;
@@ -12,7 +12,7 @@ const SignatureIcon = ({ className }: IProps) => (
     height='60.000000pt'
     viewBox='0 0 123.000000 60.000000'
     preserveAspectRatio='xMidYMid meet'
-    className={clsxm(className, 'inline z-1')}
+    className={clsx(className, 'inline z-1')}
   >
     <g
       transform='translate(0.000000,60.000000) scale(0.100000,-0.100000)'
