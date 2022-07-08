@@ -23,7 +23,7 @@ export default function UnstyledLink({
 
   if (!isNewTab) {
     return (
-      <Link href={href}>
+      <Link href={href} rel='preload'>
         <a {...rest} className={clsx(className)}>
           {children}
         </a>
