@@ -1,11 +1,12 @@
+import clsx from 'clsx';
 import { useEffect, useState } from 'react';
 import useDelayedRender from 'use-delayed-render';
 
 import styles from 'styles/mobile-menu.module.css';
 
-import clsxm from '@/lib/clsxm';
-
 import StyledLink from '@/components/atoms/StyledLink';
+
+import { useGlobalContext } from '@/context/GlobalContext';
 
 export default function MobileMenu() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -17,12 +18,18 @@ export default function MobileMenu() {
     }
   );
 
+  const {
+    globalState: { navIsActive, setNavIsActive },
+  } = useGlobalContext();
+
   function toggleMenu() {
     if (isMenuOpen) {
       setIsMenuOpen(false);
+      setNavIsActive(false);
       document.body.style.overflow = '';
     } else {
       setIsMenuOpen(true);
+      setNavIsActive(true);
       document.body.style.overflow = 'hidden';
     }
   }
@@ -36,7 +43,7 @@ export default function MobileMenu() {
   return (
     <>
       <button
-        className={clsxm(styles.burger, 'visible md:hidden')}
+        className={clsx(styles.burger, 'visible md:hidden')}
         aria-label='Toggle menu'
         type='button'
         onClick={toggleMenu}
@@ -46,7 +53,7 @@ export default function MobileMenu() {
       </button>
       {isMenuMounted && (
         <ul
-          className={clsxm(
+          className={clsx(
             styles.menu,
             'flex flex-col bg-gray-50/50 dark:bg-gray-900/50 backdrop-blur',
             isMenuRendered && styles.menuRendered

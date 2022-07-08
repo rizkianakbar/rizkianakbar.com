@@ -10,7 +10,12 @@ function NavItem({ href, text }: { href: string; text: string }) {
   const isActive = router.asPath === href;
 
   return (
-    <StyledLink href={href} isActive={isActive} variant='one'>
+    <StyledLink
+      href={href}
+      isActive={isActive}
+      variant='one'
+      className='hidden md:inline-block'
+    >
       <span className='capsize'>{text}</span>
     </StyledLink>
   );
