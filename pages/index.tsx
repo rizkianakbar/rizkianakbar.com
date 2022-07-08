@@ -1,16 +1,97 @@
+import clsx from 'clsx';
 import type { NextPage } from 'next';
-import { Suspense } from 'react';
+import { default as NextImage } from 'next/image';
+import * as React from 'react';
 
+import StyledLink from '@/components/atoms/StyledLink';
+import GithubIcon from '@/components/icons/GithubIcon';
+import ResumeIcon from '@/components/icons/ResumeIcon';
+import TwitterIcon from '@/components/icons/TwitterIcon';
 import Layout from '@/components/layout';
-import ComingSoon from '@/components/molecules/ComingSoon';
+
+import { useGlobalContext } from '@/context/GlobalContext';
 
 const Home: NextPage = () => {
+  const {
+    globalState: { navIsActive, setNavIsActive },
+  } = useGlobalContext();
+
+  React.useEffect(() => {
+    setNavIsActive(false);
+  }, [setNavIsActive]);
+
   return (
-    <Suspense fallback={null}>
+    <React.Suspense fallback={null}>
       <Layout>
-        <ComingSoon name='Home' />
+        <div className='flex flex-col justify-center items-start max-w-2xl border-gray-200 dark:border-gray-700 mx-auto pb-16'>
+          <div className='flex flex-col-reverse sm:flex-row items-start'>
+            <div className='flex flex-col pr-8'>
+              <h1 className='font-bold text-3xl md:text-5xl tracking-tight mb-2 text-black dark:text-white'>
+                Hey, I&apos;m
+              </h1>
+              <h1 className='font-bold text-3xl md:text-5xl tracking-tight mb-1 text-black dark:text-white'>
+                Rizkian Akbar
+              </h1>
+              <h2 className='text-gray-700 dark:text-gray-200 blur-[4px] select-none'>
+                Test Automation Engineer at{' '}
+                <span className='font-semibold'>MasihSecret</span>
+                {/* <span className='font-semibold'>HappyFresh</span> */}
+              </h2>
+              <h2 className='text-gray-700 dark:text-gray-200 mb-4 blur-[4px] select-none'>
+                Frontend Engineer at{' '}
+                <span className='font-semibold'>MasihSecret</span>
+                {/* <span className='font-semibold'>Bountie</span> */}
+              </h2>
+              <p className='text-gray-600 dark:text-gray-400 mb-4'>
+                I work in React ecosystem especially with Next.js, Tailwind,
+                Typescript. I also work in Automation Testing ecosystem with
+                Appium, Ruby, Cucumber, Gherkins. ✌🏻✌🏻✌🏻🔥🔥🔥
+              </p>
+            </div>
+            <div
+              className={clsx(
+                navIsActive ? 'blur-[4px]' : 'blur-[0px]',
+                'w-[100px] sm:w-[276px] mb-8 sm:mb-0 mr-auto'
+              )}
+            >
+              <NextImage
+                alt='Rizkian Akbar'
+                height={287}
+                width={210}
+                src='/kian.jpeg'
+                sizes='30vw'
+                priority
+                className='rounded-full filter grayscale'
+              />
+            </div>
+          </div>
+          <div className='flex flex-wrap items-start'>
+            <StyledLink variant='one' href='/' className='group'>
+              <ResumeIcon className='inline mr-2 ml-1 mb-1 group-hover:text-black dark:group-hover:text-white' />
+              Resume
+            </StyledLink>{' '}
+            <StyledLink
+              openNewTab
+              variant='one'
+              href='https://twitter.com/rizkianakbr'
+              className='group'
+            >
+              <TwitterIcon className='inline mr-[2px] group-hover:text-blue-400' />
+              @rizkianakbr
+            </StyledLink>{' '}
+            <StyledLink
+              openNewTab
+              variant='one'
+              href='https://github.com/rizkianakbar'
+              className='group'
+            >
+              <GithubIcon className='inline mr-[2px] group-hover:text-black dark:group-hover:text-white' />
+              rizkianakbar
+            </StyledLink>
+          </div>
+        </div>
       </Layout>
-    </Suspense>
+    </React.Suspense>
   );
 };
 
