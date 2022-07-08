@@ -3,10 +3,14 @@ import { ThemeProvider } from 'next-themes';
 
 import '../styles/globals.css';
 
+import { GlobalProvider } from '@/context/GlobalContext';
+
 function MyApp({ Component, pageProps }: AppProps) {
   return (
     <ThemeProvider attribute='class'>
-      <Component {...pageProps} />
+      <GlobalProvider>
+        <Component {...pageProps} />
+      </GlobalProvider>
     </ThemeProvider>
   );
 }
