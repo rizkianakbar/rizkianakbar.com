@@ -72,10 +72,7 @@ const Home: NextPage = () => {
               </p>
             </div>
             <div
-              className={clsx(
-                navIsActive ? 'blur-[4px]' : 'blur-[0px]',
-                'w-[100px] sm:w-[276px] mb-8 sm:mb-0 mr-auto'
-              )}
+              className='w-[100px] sm:w-[276px] mb-8 sm:mb-0 mr-auto'
               data-fade='2'
             >
               <NextImage
