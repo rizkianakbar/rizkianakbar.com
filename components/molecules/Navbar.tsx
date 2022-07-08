@@ -29,7 +29,7 @@ export default function Navbar() {
   React.useEffect(() => setMounted(true), []);
 
   return (
-    <div className='flex flex-col justify-center px-8 fixed w-full mt-[-5px] bg-gray-50/80  dark:bg-gray-900/80 backdrop-blur'>
+    <div className='flex flex-col justify-center px-8 fixed w-full mt-[-5px] bg-gray-50/80  dark:bg-gray-900/80 backdrop-blur z-[999]'>
       <nav className='flex items-center justify-between w-full relative max-w-2xl border-gray-200 dark:border-gray-700 mx-auto pt-8 pb-8 sm:pb-8 text-gray-900 dark:text-gray-100'>
         <a href='#skip' className='skip-nav'>
           Skip to content

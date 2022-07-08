@@ -19,7 +19,7 @@ export default function MobileMenu() {
   );
 
   const {
-    globalState: { navIsActive, setNavIsActive },
+    globalState: { setNavIsActive },
   } = useGlobalContext();
 
   function toggleMenu() {
@@ -43,7 +43,7 @@ export default function MobileMenu() {
   return (
     <>
       <button
-        className={clsx(styles.burger, 'visible md:hidden')}
+        className={clsx(styles.burger, 'visible md:hidden z-[9999]')}
         aria-label='Toggle menu'
         type='button'
         onClick={toggleMenu}

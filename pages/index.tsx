@@ -68,7 +68,7 @@ const Home: NextPage = () => {
               >
                 I work in React ecosystem especially with Next.js, Tailwind,
                 Typescript. I also work in Automation Testing ecosystem with
-                Appium, Ruby, Cucumber, Gherkins. ✌🏻✌🏻✌🏻🔥🔥🔥
+                Appium, Ruby, Cucumber, Gherkins. ✌🏻🔥
               </p>
             </div>
             <div
