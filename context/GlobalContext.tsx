@@ -1,9 +1,10 @@
-import { createContext, useContext, useState } from 'react';
+import * as React from 'react';
 
 export interface GlobalProviderProps {
   children: JSX.Element;
 }
 export interface DataGlobalStateInterface {
+  preloaded: boolean;
   navIsActive: boolean;
   setNavIsActive: (value: boolean) => void;
 }
@@ -13,9 +14,9 @@ export interface GlobalStateInterface {
 }
 
 export function createCtx<GlobalStateInterface>() {
-  const ctx = createContext<GlobalStateInterface | undefined>(undefined);
+  const ctx = React.createContext<GlobalStateInterface | undefined>(undefined);
   function useCtx() {
-    const c = useContext(ctx);
+    const c = React.useContext(ctx);
     if (!c) throw new Error('useCtx must be inside a Provider with a value');
     return c;
   }
@@ -26,9 +27,17 @@ export const [useGlobalContext, CtxProvider] =
   createCtx<GlobalStateInterface>();
 
 export const GlobalProvider: React.FC<GlobalProviderProps> = ({ children }) => {
-  const [navIsActive, setNavIsActive] = useState<boolean>(false);
+  const [preloaded, setIsPreloaded] = React.useState<boolean>(false);
+
+  React.useEffect(() => {
+    setTimeout(() => {
+      setIsPreloaded(true);
+    }, 200);
+  }, []);
+  const [navIsActive, setNavIsActive] = React.useState<boolean>(false);
 
   const dataGlobalState: DataGlobalStateInterface = {
+    preloaded,
     navIsActive,
     setNavIsActive,
   };
