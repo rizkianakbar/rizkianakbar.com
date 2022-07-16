@@ -6,13 +6,10 @@ import { Suspense } from 'react';
 import useLoaded from '@/hooks/useLoaded';
 
 import StyledLink from '@/components/atoms/StyledLink';
-import EmailIcon from '@/components/icons/EmailIcon';
-import GithubIcon from '@/components/icons/GithubIcon';
-import LinkedinIcon from '@/components/icons/LinkedinIcon';
-import ResumeIcon from '@/components/icons/ResumeIcon';
-import TwitterIcon from '@/components/icons/TwitterIcon';
-import WhatsappIcon from '@/components/icons/WhatsappIcon';
+import UnstyledLink from '@/components/atoms/UnstyledLink';
 import Layout from '@/components/layout';
+
+import { AboutBio, AboutSocial, aboutWorkExperience } from '@/constant/about';
 
 const About: NextPage = () => {
   const isLoaded = useLoaded();
@@ -63,71 +60,59 @@ const About: NextPage = () => {
               className='flex flex-wrap items-start justify-center'
               data-fade='5'
             >
-              <StyledLink
-                variant='one'
-                href='https://drive.google.com/file/d/1U8bbHb1dnxaaHbS9_j8W4bsLH2lTAQoX/view?usp=sharing'
-                className='group'
-              >
-                <ResumeIcon className='inline mr-2 ml-1 mb-1 group-hover:text-black dark:group-hover:text-white' />
-              </StyledLink>{' '}
-              <StyledLink
-                openNewTab
-                variant='one'
-                // email
-                href='mailto:rizkianakbar4@gmail.com'
-                className='group'
-              >
-                <EmailIcon className='inline mt-[-5px] group-hover:text-black dark:group-hover:text-white' />
-              </StyledLink>{' '}
-              <StyledLink
-                openNewTab
-                variant='one'
-                href='https://www.linkedin.com/in/rizkianakbar/'
-                className='group'
-              >
-                <LinkedinIcon className='inline mr-[2px] group-hover:text-blue-400' />
-              </StyledLink>
-              <StyledLink
-                openNewTab
-                variant='one'
-                href='https://github.com/rizkianakbar'
-                className='group'
-              >
-                <GithubIcon className='inline mr-[2px] group-hover:text-black dark:group-hover:text-white' />
-              </StyledLink>
-              <StyledLink
-                openNewTab
-                variant='one'
-                href='https://twitter.com/rizkianakbr'
-                className='group'
-              >
-                <TwitterIcon className='inline mr-[2px] group-hover:text-blue-400' />
-              </StyledLink>{' '}
-              <StyledLink
-                openNewTab
-                variant='one'
-                // whatsapp
-                href='https://wa.me/62895610381334'
-                className='group'
-              >
-                <WhatsappIcon className='inline mt-[-5px] group-hover:text-green-300 dark:group-hover:text-green-300' />
-              </StyledLink>
+              {AboutSocial.map((item, index) => (
+                <StyledLink
+                  variant='one'
+                  href={item.url}
+                  className='group'
+                  key={index}
+                >
+                  {item.icon}
+                </StyledLink>
+              ))}
             </div>
             <hr className='w-full border-1 border-gray-200 dark:border-gray-800 my-6' />
           </div>
           <div className='flex flex-col'>
             <h1
-              className=' font-bold text-3xl md:text-4xl tracking-tight mb-2 text-black dark:text-white'
+              className=' font-bold text-2xl md:text-4xl tracking-tight mb-2 text-black dark:text-white'
               data-fade='2'
             >
               Bio
             </h1>
 
             <p className='text-gray-600 dark:text-gray-400 mb-4' data-fade='4'>
-              I work in React ecosystem especially with Next.js, Tailwind,
-              Typescript. I also work in Automation Testing ecosystem with
-              Appium, Ruby, Cucumber, Gherkins. ✌🏻🔥
+              {AboutBio}
             </p>
+          </div>
+          <div className='flex flex-col'>
+            <h1
+              className='font-bold text-2xl md:text-4xl tracking-tight mb-4 text-black dark:text-white'
+              data-fade='2'
+            >
+              Work Experience
+            </h1>
+            {aboutWorkExperience.map((item, index) => (
+              <div className='w-full mb-8' key={index}>
+                <div className='flex flex-col justify-between md:flex-row'>
+                  <h4 className='w-full text-lg font-medium text-gray-900 md:text-xl dark:text-gray-100'>
+                    {item.position} at{' '}
+                    <UnstyledLink href={item.url} className='font-bold'>
+                      {item.company}
+                    </UnstyledLink>
+                  </h4>
+                  <p className='w-52 mb-4 text-left text-gray-500 md:text-right md:mb-0'>
+                    Nov 2021 - Present
+                  </p>
+                </div>
+                <p className='text-gray-600 dark:text-gray-400 mb-2'>
+                  {item.location}
+                </p>
+                <p className='text-gray-600 dark:text-gray-400'>
+                  {item.description}
+                </p>
+              </div>
+            ))}
           </div>
         </div>
       </Layout>
