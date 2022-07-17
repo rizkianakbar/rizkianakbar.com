@@ -92,27 +92,26 @@ const About: NextPage = () => {
             >
               Work Experience
             </h1>
-            {aboutWorkExperience.map((item, index) => (
-              <div className='w-full mb-8' key={index}>
-                <div className='flex flex-col justify-between md:flex-row'>
-                  <h4 className='w-full text-lg font-medium text-gray-900 md:text-xl dark:text-gray-100'>
+            <ol className='relative border-l border-gray-200 dark:border-gray-700'>
+              {aboutWorkExperience.map((item, index) => (
+                <li className='mb-10 last:mb-0 ml-4' key={index}>
+                  <div className='absolute w-3 h-3 bg-gray-200 rounded-full mt-2 -left-1.5 border border-white dark:border-gray-900 dark:bg-gray-700'></div>
+                  <h3 className='text-lg font-medium text-gray-900 md:text-xl dark:text-gray-100'>
                     {item.position} at{' '}
                     <UnstyledLink href={item.url} className='font-bold'>
                       {item.company}
                     </UnstyledLink>
-                  </h4>
-                  <p className='w-52 mb-4 text-left text-gray-500 md:text-right md:mb-0'>
-                    Nov 2021 - Present
-                  </p>
-                </div>
-                <p className='text-gray-600 dark:text-gray-400 mb-2'>
-                  {item.location}
-                </p>
-                <p className='text-gray-600 dark:text-gray-400'>
+                  </h3>
+                  <time className='mb-2 text-sm font-normal leading-none text-gray-400 dark:text-gray-500'>
+                    {item.date}
+                  </time>
+                  <address className='mb-1 text-sm font-normal not-italic leading-none text-gray-400 dark:text-gray-500'>
+                    {item.location}
+                  </address>
                   {item.description}
-                </p>
-              </div>
-            ))}
+                </li>
+              ))}
+            </ol>
           </div>
         </div>
       </Layout>
