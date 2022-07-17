@@ -10,8 +10,17 @@ export const aboutWorkExperience = [
     company: 'Bountie',
     position: 'Frontend Engineer',
     date: 'Nov 2021 - Present',
-    description:
-      'Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus voluptate autem officia voluptas possimus! Alias debitis saepe consequuntur sequi corporis dolores possimus corrupti, blanditiis nihil temporibus doloribus ab ipsum dicta?',
+    description: (
+      <>
+        <p className='text-gray-600 dark:text-gray-400'>
+          • Create new features and maintain the current flow of a frontend site
+          to be accessible and a great experience
+        </p>
+        <p className='text-gray-600 dark:text-gray-400'>
+          • Refactoring codes and improvement
+        </p>
+      </>
+    ),
     location: 'Singapore, Singapore',
     url: 'https://www.linkedin.com/company/bountiegaming/',
   },
@@ -19,8 +28,16 @@ export const aboutWorkExperience = [
     company: 'HappyFresh',
     position: 'Test Automation Engineer',
     date: 'Nov 2021 - Present',
-    description:
-      'Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus voluptate autem officia voluptas possimus! Alias debitis saepe consequuntur sequi corporis dolores possimus corrupti, blanditiis nihil temporibus doloribus ab ipsum dicta?',
+    description: (
+      <>
+        <p className='text-gray-600 dark:text-gray-400'>
+          • Automate new feature on android/IOS
+        </p>
+        <p className='text-gray-600 dark:text-gray-400'>
+          • Increase reliability and stability smoke test for automation test
+        </p>
+      </>
+    ),
     location: 'Jakarta, Indonesia',
     url: 'https://www.linkedin.com/company/happyfresh/',
   },
@@ -28,8 +45,18 @@ export const aboutWorkExperience = [
     company: 'NEXT TI',
     position: 'Frontend Engineer',
     date: 'Jan 2020 - Nov 2021',
-    description:
-      'Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus voluptate autem officia voluptas possimus! Alias debitis saepe consequuntur sequi corporis dolores possimus corrupti, blanditiis nihil temporibus doloribus ab ipsum dicta?',
+    description: (
+      <>
+        <p className='text-gray-600 dark:text-gray-400'>
+          • Maintenance and developed the collection system of KEB Hana bank
+          Indonesia
+        </p>
+        <p className='text-gray-600 dark:text-gray-400'>
+          • Create a hybrid application for field agents from KEB Hana Bank
+          Indonesia
+        </p>
+      </>
+    ),
     location: 'Jakarta, Indonesia',
     url: 'https://www.linkedin.com/company/next-ins/',
   },
@@ -41,7 +68,7 @@ export const AboutBio =
 export const AboutSocial = [
   {
     name: 'Resume',
-    url: 'https://drive.google.com/file/d/1U8bbHb1dnxaaHbS9_j8W4bsLH2lTAQoX/view?usp=sharing',
+    url: 'https://drive.google.com/file/d/1uSwU6N37NHpoCkDg_v2U5_GHUlFb5GSf/view?usp=sharing',
     icon: (
       <ResumeIcon className='inline mr-2 ml-1 mb-1 group-hover:text-black dark:group-hover:text-white' />
     ),
