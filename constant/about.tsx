@@ -24,23 +24,23 @@ export const aboutWorkExperience = [
     location: 'Singapore, Singapore',
     url: 'https://www.linkedin.com/company/bountiegaming/',
   },
-  {
-    company: 'HappyFresh',
-    position: 'Test Automation Engineer',
-    date: 'Nov 2021 - Present',
-    description: (
-      <>
-        <p className='text-gray-600 dark:text-gray-400'>
-          • Automate new feature on android/IOS
-        </p>
-        <p className='text-gray-600 dark:text-gray-400'>
-          • Increase reliability and stability smoke test for automation test
-        </p>
-      </>
-    ),
-    location: 'Jakarta, Indonesia',
-    url: 'https://www.linkedin.com/company/happyfresh/',
-  },
+  // {
+  //   company: 'HappyFresh',
+  //   position: 'Test Automation Engineer',
+  //   date: 'Nov 2021 - Present',
+  //   description: (
+  //     <>
+  //       <p className='text-gray-600 dark:text-gray-400'>
+  //         • Automate new feature on android/IOS
+  //       </p>
+  //       <p className='text-gray-600 dark:text-gray-400'>
+  //         • Increase reliability and stability smoke test for automation test
+  //       </p>
+  //     </>
+  //   ),
+  //   location: 'Jakarta, Indonesia',
+  //   url: 'https://www.linkedin.com/company/happyfresh/',
+  // },
   {
     company: 'NEXT TI',
     position: 'Frontend Engineer',
@@ -63,7 +63,7 @@ export const aboutWorkExperience = [
 ];
 
 export const AboutBio =
-  'I work in React ecosystem especially with Next.js, Tailwind, Typescript. I also work in Automation Testing ecosystem with Appium, Ruby, Cucumber, Gherkins. ✌🏻🔥';
+  'A Frontend Engineer who started from reading an old book entitled "HTML & CSS BELAJAR DARI KASUS" at 15 years old to someone who is an expert in frontend development';
 
 export const AboutSocial = [
   {
