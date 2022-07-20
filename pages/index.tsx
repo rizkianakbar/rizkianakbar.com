@@ -87,7 +87,11 @@ const Home: NextPage = () => {
             </div>
           </div>
           <div className='flex flex-wrap items-start' data-fade='5'>
-            <StyledLink variant='one' href='/' className='group'>
+            <StyledLink
+              variant='one'
+              href='https://drive.google.com/file/d/1uSwU6N37NHpoCkDg_v2U5_GHUlFb5GSf/view'
+              className='group'
+            >
               <ResumeIcon className='inline mr-2 ml-1 mb-1 group-hover:text-black dark:group-hover:text-white' />
               Resume
             </StyledLink>{' '}
