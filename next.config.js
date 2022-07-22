@@ -13,6 +13,10 @@ module.exports = {
     images: { allowFutureImage: true },
     concurrentFeatures: true,
   },
+  i18n: {
+    locales: ['en'],
+    defaultLocale: 'en',
+  },
   async headers() {
     return [
       {

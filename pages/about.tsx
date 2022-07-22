@@ -111,9 +111,9 @@ const About: NextPage = () => {
                   </div>
                   <div className='list-outside border-l border-gray-200 dark:border-gray-700 col-span-9'>
                     <div className='mb-10 last:mb-0 ml-2'>
-                      <h3 className='text-lg font-medium text-gray-900 md:text-xl dark:text-gray-100'>
+                      <h2 className='text-lg font-medium text-gray-900 md:text-xl dark:text-gray-100'>
                         {subItem.position}
-                      </h3>
+                      </h2>
                       <time className='mb-2 text-sm font-normal leading-none text-gray-400 dark:text-gray-500'>
                         {subItem.date}
                       </time>
