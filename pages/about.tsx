@@ -105,7 +105,7 @@ const About: NextPage = () => {
                         width={150}
                         height={50}
                         src={subItem.image}
-                        className='object-contain'
+                        className='object-contain filter grayscale hover:grayscale-off hover:filter-none'
                       />
                     </UnstyledLink>
                   </div>
