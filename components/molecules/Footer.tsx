@@ -44,6 +44,9 @@ export default function Footer() {
           <StyledLink openNewTab href='https://quranmemo.vercel.app'>
             QuranMemo
           </StyledLink>
+          <StyledLink openNewTab href='https://caridev.vercel.app'>
+            CariDev
+          </StyledLink>
           <StyledLink openNewTab href='https://github.com/rizkianakbar'>
             Galen
           </StyledLink>
