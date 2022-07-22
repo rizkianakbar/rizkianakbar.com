@@ -5,60 +5,108 @@ import ResumeIcon from '@/components/icons/ResumeIcon';
 import TwitterIcon from '@/components/icons/TwitterIcon';
 import WhatsappIcon from '@/components/icons/WhatsappIcon';
 
-export const aboutWorkExperience = [
+export const aboutData = [
   {
-    company: 'Bountie',
-    position: 'Frontend Engineer',
-    date: 'Nov 2021 - Present',
-    description: (
-      <>
-        <p className='text-gray-600 dark:text-gray-400'>
-          • Create new features and maintain the current flow of a frontend site
-          to be accessible and a great experience
-        </p>
-        <p className='text-gray-600 dark:text-gray-400'>
-          • Refactoring codes and improvement
-        </p>
-      </>
-    ),
-    location: 'Singapore, Singapore',
-    url: 'https://www.linkedin.com/company/bountiegaming/',
+    title: 'Work Experience',
+    data: [
+      {
+        image:
+          'https://res.cloudinary.com/rizkianakbar/image/upload/v1658501509/BOUNTIE_HUNTER_hsfbej.svg',
+        company: 'Bountie',
+        position: 'Frontend Engineer',
+        date: 'Nov 2021 - Present',
+        description: (
+          <>
+            <li>
+              Create new features and maintain the current flow of a frontend
+              site to be accessible and a great experience
+            </li>
+            <li>Refactoring codes and improvement</li>
+          </>
+        ),
+        location: 'Singapore, Singapore',
+        url: 'https://www.linkedin.com/company/bountiegaming/',
+      },
+      {
+        image:
+          'https://res.cloudinary.com/rizkianakbar/image/upload/v1658501603/f44b0cd6-e57d-44df-99ac-e2419ce90eed-1563254776865_1_wdw52f.png',
+        company: 'HappyFresh',
+        position: 'Test Automation Engineer',
+        date: 'Nov 2021 - Present',
+        description: (
+          <>
+            <li>Automate new feature on android/IOS</li>
+            <li>
+              Increase reliability and stability smoke test for automation test
+            </li>
+          </>
+        ),
+        location: 'Jakarta, Indonesia',
+        url: 'https://www.linkedin.com/company/happyfresh/',
+      },
+      {
+        image:
+          'https://res.cloudinary.com/rizkianakbar/image/upload/v1658496672/Next-TI-Logo-3_ua3yy5.png',
+        company: 'NEXT TI',
+        position: 'Frontend Engineer',
+        date: 'Jan 2020 - Nov 2021',
+        description: (
+          <>
+            <li>
+              Maintenance and developed the collection system of KEB Hana bank
+              Indonesia
+            </li>
+            <li>
+              Create a hybrid application for field agents from KEB Hana Bank
+              Indonesia
+            </li>
+          </>
+        ),
+        location: 'Jakarta, Indonesia',
+        url: 'https://www.linkedin.com/company/next-ins/',
+      },
+    ],
   },
-  // {
-  //   company: 'HappyFresh',
-  //   position: 'Test Automation Engineer',
-  //   date: 'Nov 2021 - Present',
-  //   description: (
-  //     <>
-  //       <p className='text-gray-600 dark:text-gray-400'>
-  //         • Automate new feature on android/IOS
-  //       </p>
-  //       <p className='text-gray-600 dark:text-gray-400'>
-  //         • Increase reliability and stability smoke test for automation test
-  //       </p>
-  //     </>
-  //   ),
-  //   location: 'Jakarta, Indonesia',
-  //   url: 'https://www.linkedin.com/company/happyfresh/',
-  // },
   {
-    company: 'NEXT TI',
-    position: 'Frontend Engineer',
-    date: 'Jan 2020 - Nov 2021',
-    description: (
-      <>
-        <p className='text-gray-600 dark:text-gray-400'>
-          • Maintenance and developed the collection system of KEB Hana bank
-          Indonesia
-        </p>
-        <p className='text-gray-600 dark:text-gray-400'>
-          • Create a hybrid application for field agents from KEB Hana Bank
-          Indonesia
-        </p>
-      </>
-    ),
-    location: 'Jakarta, Indonesia',
-    url: 'https://www.linkedin.com/company/next-ins/',
+    title: 'Education',
+    data: [
+      {
+        image:
+          'https://res.cloudinary.com/rizkianakbar/image/upload/v1658496673/Logo-SoCS-Black-Blue_g5ks9j.png',
+        company: 'Binus University',
+        position: 'Computer Science',
+        date: 'Aug 2021 - Present',
+        description: (
+          <>
+            <li>Enrolled from Sept. 2021 to present</li>
+            <li>
+              Take online classes or non-regular classes in the field of
+              computer science
+            </li>
+          </>
+        ),
+        location: 'Jakarta, Indonesia',
+        url: 'https://binus.ac.id/',
+      },
+      {
+        image:
+          'https://res.cloudinary.com/rizkianakbar/image/upload/v1658496673/ImpactByteHorizontal_i4elt7.png',
+        company: 'Impact Byte',
+        position: 'Coding Bootcamp',
+        date: 'Sep 2019 - Des 2019',
+        description: (
+          <>
+            <li>Attended from Sept. 2019 to Jan 2020</li>
+            <li>
+              Scholarship awardee for Full Stack Web Development Program from
+              KEB Hana Bank
+            </li>
+          </>
+        ),
+        location: 'Jakarta, Indonesia',
+        url: 'https://impactbyte.com/id/home',
+      },
+    ],
   },
 ];
 
