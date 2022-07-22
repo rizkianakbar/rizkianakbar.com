@@ -1,6 +1,6 @@
 import clsx from 'clsx';
 import type { NextPage } from 'next';
-import { default as NextImage } from 'next/image';
+import Image, { default as NextImage } from 'next/image';
 import { Suspense } from 'react';
 
 import useLoaded from '@/hooks/useLoaded';
@@ -9,7 +9,7 @@ import StyledLink from '@/components/atoms/StyledLink';
 import UnstyledLink from '@/components/atoms/UnstyledLink';
 import Layout from '@/components/layout';
 
-import { AboutBio, AboutSocial, aboutWorkExperience } from '@/constant/about';
+import { AboutBio, aboutData, AboutSocial } from '@/constant/about';
 
 const About: NextPage = () => {
   const isLoaded = useLoaded();
@@ -75,44 +75,60 @@ const About: NextPage = () => {
           </div>
           <div className='flex flex-col'>
             <h1
-              className=' font-bold text-2xl md:text-4xl tracking-tight mb-2 text-black dark:text-white'
+              className=' font-semibold text-2xl md:text-4xl tracking-tight mb-2 text-black dark:text-white'
               data-fade='2'
             >
               Bio
             </h1>
-
-            <p className='text-gray-600 dark:text-gray-400 mb-4' data-fade='4'>
+            <p className='text-gray-600 dark:text-gray-400' data-fade='4'>
               {AboutBio}
             </p>
           </div>
-          <div className='flex flex-col'>
-            <h1
-              className='font-bold text-2xl md:text-4xl tracking-tight mb-4 text-black dark:text-white'
-              data-fade='2'
-            >
-              Work Experience
-            </h1>
-            <ol className='relative border-l border-gray-200 dark:border-gray-700'>
-              {aboutWorkExperience.map((item, index) => (
-                <li className='mb-10 last:mb-0 ml-4' key={index}>
-                  <div className='absolute w-3 h-3 bg-gray-200 rounded-full mt-2 -left-1.5 border border-white dark:border-gray-900 dark:bg-gray-700'></div>
-                  <h3 className='text-lg font-medium text-gray-900 md:text-xl dark:text-gray-100'>
-                    {item.position} at{' '}
-                    <UnstyledLink href={item.url} className='font-bold'>
-                      {item.company}
+          {aboutData.map((item, index) => (
+            <div key={index}>
+              <h1
+                className='font-semibold text-2xl md:text-4xl tracking-tight  text-black dark:text-white w-full mb-4'
+                data-fade='2'
+              >
+                {item.title}
+              </h1>
+              {item.data.map((subItem, subIndex) => (
+                <div
+                  className='grid grid-cols-12 gap-2 w-full mb-6'
+                  data-fade='3'
+                  key={subIndex}
+                >
+                  <div className='col-span-3'>
+                    <UnstyledLink href={subItem.url} className='font-bold'>
+                      <Image
+                        alt='Rizkian Akbar'
+                        width={150}
+                        height={50}
+                        src={subItem.image}
+                        className='object-contain'
+                      />
                     </UnstyledLink>
-                  </h3>
-                  <time className='mb-2 text-sm font-normal leading-none text-gray-400 dark:text-gray-500'>
-                    {item.date}
-                  </time>
-                  <address className='mb-1 text-sm font-normal not-italic leading-none text-gray-400 dark:text-gray-500'>
-                    {item.location}
-                  </address>
-                  {item.description}
-                </li>
+                  </div>
+                  <div className='list-outside border-l border-gray-200 dark:border-gray-700 col-span-9'>
+                    <div className='mb-10 last:mb-0 ml-2'>
+                      <h3 className='text-lg font-medium text-gray-900 md:text-xl dark:text-gray-100'>
+                        {subItem.position}
+                      </h3>
+                      <time className='mb-2 text-sm font-normal leading-none text-gray-400 dark:text-gray-500'>
+                        {subItem.date}
+                      </time>
+                      <address className='mb-1 text-sm font-normal not-italic leading-none text-gray-400 dark:text-gray-500'>
+                        {subItem.location}
+                      </address>
+                      <ul className='list-disc list-outside ml-6'>
+                        {subItem.description}
+                      </ul>
+                    </div>
+                  </div>
+                </div>
               ))}
-            </ol>
-          </div>
+            </div>
+          ))}
         </div>
       </Layout>
     </Suspense>
