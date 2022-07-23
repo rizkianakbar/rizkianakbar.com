@@ -2,13 +2,12 @@ import clsx from 'clsx';
 import type { NextPage } from 'next';
 import { default as NextImage } from 'next/image';
 import * as React from 'react';
+import { BsGithub, BsTwitter } from 'react-icons/bs';
+import { HiNewspaper } from 'react-icons/hi';
 
 import useLoaded from '@/hooks/useLoaded';
 
 import StyledLink from '@/components/atoms/StyledLink';
-import GithubIcon from '@/components/icons/GithubIcon';
-import ResumeIcon from '@/components/icons/ResumeIcon';
-import TwitterIcon from '@/components/icons/TwitterIcon';
 import Layout from '@/components/layout';
 
 import { useGlobalContext } from '@/context/GlobalContext';
@@ -92,7 +91,7 @@ const Home: NextPage = () => {
               href='https://drive.google.com/file/d/1uSwU6N37NHpoCkDg_v2U5_GHUlFb5GSf/view'
               className='group'
             >
-              <ResumeIcon className='inline mr-2 ml-1 mb-1 group-hover:text-black dark:group-hover:text-white' />
+              <HiNewspaper className='inline mr-[5px] group-hover:text-black dark:group-hover:text-white h-5 w-5 ml-0.5 mb-1' />
               Resume
             </StyledLink>{' '}
             <StyledLink
@@ -101,7 +100,7 @@ const Home: NextPage = () => {
               href='https://twitter.com/rizkianakbr'
               className='group'
             >
-              <TwitterIcon className='inline mr-[2px] group-hover:text-blue-400' />
+              <BsTwitter className='inline mr-[2px] group-hover:text-blue-400 h-5 w-5 ml-0.5 mb-1' />
               @rizkianakbr
             </StyledLink>{' '}
             <StyledLink
@@ -110,7 +109,7 @@ const Home: NextPage = () => {
               href='https://github.com/rizkianakbar'
               className='group'
             >
-              <GithubIcon className='inline mr-[2px] group-hover:text-black dark:group-hover:text-white' />
+              <BsGithub className='inline mr-[5px] group-hover:text-black dark:group-hover:text-white h-5 w-5 ml-0.5 mb-1' />
               rizkianakbar
             </StyledLink>
           </div>

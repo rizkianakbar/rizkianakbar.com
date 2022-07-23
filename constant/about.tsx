@@ -1,9 +1,6 @@
-import EmailIcon from '@/components/icons/EmailIcon';
-import GithubIcon from '@/components/icons/GithubIcon';
-import LinkedinIcon from '@/components/icons/LinkedinIcon';
-import ResumeIcon from '@/components/icons/ResumeIcon';
-import TwitterIcon from '@/components/icons/TwitterIcon';
-import WhatsappIcon from '@/components/icons/WhatsappIcon';
+import { BsGithub, BsLinkedin, BsTwitter, BsWhatsapp } from 'react-icons/bs';
+import { HiNewspaper } from 'react-icons/hi';
+import { MdOutlineEmail } from 'react-icons/md';
 
 export const aboutData = [
   {
@@ -118,40 +115,42 @@ export const AboutSocial = [
     name: 'Resume',
     url: 'https://drive.google.com/file/d/1uSwU6N37NHpoCkDg_v2U5_GHUlFb5GSf/view?usp=sharing',
     icon: (
-      <ResumeIcon className='inline mr-2 ml-1 mb-1 group-hover:text-black dark:group-hover:text-white' />
+      <HiNewspaper className='inline mb-1 group-hover:text-black dark:group-hover:text-white w-5 h-5' />
     ),
   },
   {
     name: 'Email',
     url: 'mailto:rizkianakbar4@gmail.com',
     icon: (
-      <EmailIcon className='inline mt-[-5px] group-hover:text-black dark:group-hover:text-white' />
+      <MdOutlineEmail className='inline mb-1 group-hover:text-black dark:group-hover:text-white w-5 h-5' />
     ),
   },
   {
     name: 'Linkedin',
     url: 'https://www.linkedin.com/in/rizkianakbar/',
     icon: (
-      <LinkedinIcon className='inline mr-[2px] group-hover:text-blue-400' />
+      <BsLinkedin className='inline mb-1 group-hover:text-black dark:group-hover:text-white w-5 h-5' />
     ),
   },
   {
     name: 'Github',
     url: 'https://github.com/rizkianakbar',
     icon: (
-      <GithubIcon className='inline mr-[2px] group-hover:text-black dark:group-hover:text-white' />
+      <BsGithub className='inline mb-1 group-hover:text-black dark:group-hover:text-white w-5 h-5' />
     ),
   },
   {
     name: 'Twitter',
     url: 'https://twitter.com/rizkianakbr',
-    icon: <TwitterIcon className='inline mr-[2px] group-hover:text-blue-400' />,
+    icon: (
+      <BsTwitter className='inline mb-1 group-hover:text-black dark:group-hover:text-white w-5 h-5' />
+    ),
   },
   {
     name: 'Whatsapp',
     url: 'https://wa.me/62895610381334',
     icon: (
-      <WhatsappIcon className='inline mt-[-5px] group-hover:text-green-300 dark:group-hover:text-green-300' />
+      <BsWhatsapp className='inline mb-1 group-hover:text-black dark:group-hover:text-white w-5 h-5' />
     ),
   },
 ];
