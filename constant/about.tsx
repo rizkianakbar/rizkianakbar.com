@@ -129,7 +129,7 @@ export const AboutSocial = [
     name: 'Linkedin',
     url: 'https://www.linkedin.com/in/rizkianakbar/',
     icon: (
-      <BsLinkedin className='inline mb-1 group-hover:text-black dark:group-hover:text-white w-5 h-5' />
+      <BsLinkedin className='inline mb-1 group-hover:text-blue-400 dark:group-hover:text-blue-400 w-5 h-5' />
     ),
   },
   {
@@ -143,7 +143,7 @@ export const AboutSocial = [
     name: 'Twitter',
     url: 'https://twitter.com/rizkianakbr',
     icon: (
-      <BsTwitter className='inline mb-1 group-hover:text-black dark:group-hover:text-white w-5 h-5' />
+      <BsTwitter className='inline mb-1 group-hover:text-blue-400 dark:group-hover:text-blue-400 w-5 h-5' />
     ),
   },
   {
