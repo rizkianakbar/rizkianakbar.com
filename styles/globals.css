@@ -111,3 +111,46 @@ input[type='email'] {
 .fade-in-start [data-fade='8'] {
   transition-delay: 800ms;
 }
+
+.glow {
+  position: relative;
+  color: black !important;
+  border-radius: 3px;
+}
+
+.glow:before {
+  position: absolute;
+  content: '';
+  top: calc(-1 * 3px);
+  left: calc(-1 * 3px);
+  z-index: -1;
+  width: calc(100% + 3px * 2);
+  height: calc(100% + 3px * 2);
+  background: linear-gradient(
+    45deg,
+    hsl(224, 85%, 66%),
+    hsl(269, 85%, 66%),
+    hsl(314, 85%, 66%),
+    hsl(359, 85%, 66%),
+    hsl(44, 85%, 66%),
+    hsl(89, 85%, 66%),
+    hsl(134, 85%, 66%),
+    hsl(179, 85%, 66%)
+  );
+  background-size: 300% 300%;
+  background-position: 0 50%;
+  border-radius: calc(2 * 3px);
+  animation: moveGradient 4s alternate infinite;
+}
+
+@keyframes moveGradient {
+  0% {
+    background-position: 0 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0 50%;
+  }
+}
