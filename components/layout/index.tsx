@@ -59,7 +59,7 @@ export default function Layout(props: IProps) {
       <MobileMenu />
       <main
         id='skip'
-        className='flex flex-col justify-center px-8 bg-gray-50 dark:bg-gray-900 overflow-y-auto mt-[130px]'
+        className='flex flex-col justify-center px-4 bg-gray-50 dark:bg-gray-900 overflow-y-auto mt-[130px]'
       >
         {children}
         <Footer />
