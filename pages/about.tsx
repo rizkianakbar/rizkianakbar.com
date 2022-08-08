@@ -22,7 +22,7 @@ const About: NextPage = () => {
             isLoaded && 'fade-in-start'
           )}
         >
-          <div className='flex flex-col text-center w-full'>
+          <div className='flex flex-col w-full text-center'>
             <div className='w-[100px] sm:w-[150px] mb-6 mx-auto' data-fade='2'>
               <NextImage
                 alt='Rizkian Akbar'
@@ -35,7 +35,7 @@ const About: NextPage = () => {
               />
             </div>
             <h1
-              className='text-center font-bold text-3xl md:text-4xl tracking-tight mb-1 text-black dark:text-white'
+              className='mb-1 text-3xl font-bold tracking-tight text-center text-black md:text-4xl dark:text-white'
               data-fade='2'
             >
               Rizkian Akbar
@@ -71,11 +71,11 @@ const About: NextPage = () => {
                 </StyledLink>
               ))}
             </div>
-            <hr className='w-full border-1 border-gray-200 dark:border-gray-800 my-6' />
+            <hr className='w-full my-6 border-gray-200 border-1 dark:border-gray-800' />
           </div>
           <div className='flex flex-col'>
             <h1
-              className=' font-semibold text-2xl md:text-4xl tracking-tight mb-2 text-black dark:text-white'
+              className='mb-2 text-2xl font-semibold tracking-tight text-black md:text-4xl dark:text-white'
               data-fade='2'
             >
               Bio
@@ -87,14 +87,14 @@ const About: NextPage = () => {
           {aboutData.map((item, index) => (
             <div key={index}>
               <h1
-                className='font-semibold text-2xl md:text-4xl tracking-tight  text-black dark:text-white w-full mb-4'
+                className='w-full mb-4 text-2xl font-semibold tracking-tight text-black md:text-4xl dark:text-white'
                 data-fade='2'
               >
                 {item.title}
               </h1>
               {item.data.map((subItem, subIndex) => (
                 <div
-                  className='grid grid-cols-12 gap-2 w-full mb-6'
+                  className='grid w-full grid-cols-12 gap-2 mb-6'
                   data-fade='3'
                   key={subIndex}
                 >
@@ -109,18 +109,18 @@ const About: NextPage = () => {
                       />
                     </UnstyledLink>
                   </div>
-                  <div className='list-outside border-l border-gray-200 dark:border-gray-700 col-span-9'>
-                    <div className='mb-10 last:mb-0 ml-2'>
+                  <div className='col-span-9 list-outside border-l border-gray-200 dark:border-gray-700'>
+                    <div className='mb-10 ml-2 last:mb-0'>
                       <h2 className='text-lg font-medium text-gray-900 md:text-xl dark:text-gray-100'>
                         {subItem.position}
                       </h2>
                       <time className='mb-2 text-sm font-normal leading-none text-gray-400 dark:text-gray-500'>
                         {subItem.date}
                       </time>
-                      <address className='mb-1 text-sm font-normal not-italic leading-none text-gray-400 dark:text-gray-500'>
+                      <address className='mb-1 text-sm not-italic font-normal leading-none text-gray-400 dark:text-gray-500'>
                         {subItem.location}
                       </address>
-                      <ul className='list-disc list-outside ml-6'>
+                      <ul className='ml-6 list-disc list-outside'>
                         {subItem.description}
                       </ul>
                     </div>

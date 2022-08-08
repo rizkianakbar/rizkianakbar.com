@@ -14,7 +14,7 @@ import { useGlobalContext } from '@/context/GlobalContext';
 
 const Home: NextPage = () => {
   const {
-    globalState: { navIsActive, setNavIsActive },
+    globalState: { setNavIsActive },
   } = useGlobalContext();
 
   React.useEffect(() => {
@@ -31,16 +31,16 @@ const Home: NextPage = () => {
             isLoaded && 'fade-in-start'
           )}
         >
-          <div className='flex flex-col-reverse sm:flex-row items-start'>
+          <div className='flex flex-col-reverse items-start sm:flex-row'>
             <div className='flex flex-col pr-8'>
               <h1
-                className='font-bold text-3xl md:text-5xl tracking-tight mb-2 text-black dark:text-white'
+                className='mb-2 text-3xl font-bold tracking-tight text-black md:text-5xl dark:text-white'
                 data-fade='1'
               >
                 Hey, I&apos;m
               </h1>
               <h1
-                className='font-bold text-3xl md:text-5xl tracking-tight mb-1 text-black dark:text-white'
+                className='mb-1 text-3xl font-bold tracking-tight text-black md:text-5xl dark:text-white'
                 data-fade='2'
               >
                 Rizkian Akbar
@@ -62,7 +62,7 @@ const Home: NextPage = () => {
                 {/* <span className='font-semibold'>Bountie</span> */}
               </h2>
               <p
-                className='text-gray-600 dark:text-gray-400 mb-4'
+                className='mb-4 text-gray-600 dark:text-gray-400'
                 data-fade='4'
               >
                 I work in React ecosystem especially with Next.js, Tailwind,
