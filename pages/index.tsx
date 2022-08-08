@@ -7,6 +7,7 @@ import { HiNewspaper } from 'react-icons/hi';
 
 import useLoaded from '@/hooks/useLoaded';
 
+import Button from '@/components/atoms/Button';
 import StyledLink from '@/components/atoms/StyledLink';
 import Layout from '@/components/layout';
 
@@ -84,6 +85,18 @@ const Home: NextPage = () => {
                 className='rounded-full filter grayscale'
               />
             </div>
+          </div>
+          <div
+            className='flex flex-wrap items-start md:ml-4 mb-4'
+            data-fade='7'
+          >
+            <Button
+              className='mr-4 glow'
+              href='mailto:rizkianakbar4@gmail.com?subject=I really want to hire you as a Software Engineer'
+            >
+              Hire Me!
+            </Button>
+            <Button href='/about'>Learn more about me!</Button>
           </div>
           <div className='flex flex-wrap items-start' data-fade='5'>
             <StyledLink
