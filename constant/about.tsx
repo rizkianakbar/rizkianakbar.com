@@ -24,23 +24,23 @@ export const aboutData = [
         location: 'Singapore, Singapore',
         url: 'https://www.linkedin.com/company/bountiegaming/',
       },
-      {
-        image:
-          'https://res.cloudinary.com/rizkianakbar/image/upload/v1658501603/f44b0cd6-e57d-44df-99ac-e2419ce90eed-1563254776865_1_wdw52f.png',
-        company: 'HappyFresh',
-        position: 'Test Automation Engineer',
-        date: 'Nov 2021 - Present',
-        description: (
-          <>
-            <li>Automate new feature on android/IOS</li>
-            <li>
-              Increase reliability and stability smoke test for automation test
-            </li>
-          </>
-        ),
-        location: 'Jakarta, Indonesia',
-        url: 'https://www.linkedin.com/company/happyfresh/',
-      },
+      // {
+      //   image:
+      //     'https://res.cloudinary.com/rizkianakbar/image/upload/v1658501603/f44b0cd6-e57d-44df-99ac-e2419ce90eed-1563254776865_1_wdw52f.png',
+      //   company: 'HappyFresh',
+      //   position: 'Test Automation Engineer',
+      //   date: 'Nov 2021 - Present',
+      //   description: (
+      //     <>
+      //       <li>Automate new feature on android/IOS</li>
+      //       <li>
+      //         Increase reliability and stability smoke test for automation test
+      //       </li>
+      //     </>
+      //   ),
+      //   location: 'Jakarta, Indonesia',
+      //   url: 'https://www.linkedin.com/company/happyfresh/',
+      // },
       {
         image:
           'https://res.cloudinary.com/rizkianakbar/image/upload/v1658496672/Next-TI-Logo-3_ua3yy5.png',

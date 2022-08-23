@@ -46,21 +46,13 @@ const Home: NextPage = () => {
               >
                 Rizkian Akbar
               </h1>
+
               <h2
-                className='text-gray-700 dark:text-gray-200 blur-[4px] select-none'
+                className='text-gray-700 dark:text-gray-200 mb-4 select-none'
                 data-fade='3'
               >
-                Test Automation Engineer at{' '}
-                <span className='font-semibold'>MasihSecret</span>
-                {/* <span className='font-semibold'>HappyFresh</span> */}
-              </h2>
-              <h2
-                className='text-gray-700 dark:text-gray-200 mb-4 blur-[4px] select-none'
-                data-fade='3'
-              >
-                Frontend Engineer at{' '}
-                <span className='font-semibold'>MasihSecret</span>
-                {/* <span className='font-semibold'>Bountie</span> */}
+                Frontend Engineer at
+                <span className='font-semibold'> Bountie</span>
               </h2>
               <p
                 className='mb-4 text-gray-600 dark:text-gray-400'
