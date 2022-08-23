@@ -21,9 +21,6 @@ module.exports = {
           900: '#111111',
         },
       },
-      fontFamily: {
-        sans: ['IBM Plex Sans', ...fontFamily.sans],
-      },
       typography: (theme) => ({
         DEFAULT: {
           css: {
