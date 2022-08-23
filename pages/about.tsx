@@ -1,6 +1,7 @@
 import clsx from 'clsx';
 import type { NextPage } from 'next';
 import Image, { default as NextImage } from 'next/image';
+import Link from 'next/link';
 import { Suspense } from 'react';
 
 import useLoaded from '@/hooks/useLoaded';
@@ -35,26 +36,22 @@ const About: NextPage = () => {
               />
             </div>
             <h1
-              className='mb-1 text-3xl font-bold tracking-tight text-center text-black md:text-4xl dark:text-white'
+              className='mb-1 text-3xl font-squada font-bold tracking-tight text-center text-black md:text-4xl dark:text-white'
               data-fade='2'
             >
               Rizkian Akbar
             </h1>
             <h2
-              className='text-gray-700 dark:text-gray-200 blur-[4px] select-none'
-              data-fade='3'
-            >
-              Test Automation Engineer at{' '}
-              <span className='font-semibold'>MasihSecret</span>
-              {/* <span className='font-semibold'>HappyFresh</span> */}
-            </h2>
-            <h2
-              className='text-gray-700 dark:text-gray-200 mb-4 blur-[4px] select-none'
+              className='text-gray-700 dark:text-gray-200 select-none'
               data-fade='3'
             >
               Frontend Engineer at{' '}
-              <span className='font-semibold'>MasihSecret</span>
-              {/* <span className='font-semibold'>Bountie</span> */}
+              <span className='font-semibold'>
+                {' '}
+                <Link href='https://www.linkedin.com/company/bountiegaming/mycompany/'>
+                  <a target='_blank'>Bountie Holdings Pte. Ltd.</a>
+                </Link>
+              </span>
             </h2>
             <div
               className='flex flex-wrap items-start justify-center'

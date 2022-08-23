@@ -1,6 +1,7 @@
 import clsx from 'clsx';
 import type { NextPage } from 'next';
 import { default as NextImage } from 'next/image';
+import Link from 'next/link';
 import * as React from 'react';
 import { BsGithub, BsTwitter } from 'react-icons/bs';
 import { HiNewspaper } from 'react-icons/hi';
@@ -52,7 +53,12 @@ const Home: NextPage = () => {
                 data-fade='3'
               >
                 Frontend Engineer at
-                <span className='font-semibold'> Bountie</span>
+                <span className='font-semibold text-xl'>
+                  {' '}
+                  <Link href='https://www.linkedin.com/company/bountiegaming/mycompany/'>
+                    <a target='_blank'>Bountie Holdings Pte. Ltd.</a>
+                  </Link>
+                </span>
               </h2>
               <p
                 className='mb-4 text-gray-600 dark:text-gray-400'
