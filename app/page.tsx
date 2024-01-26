@@ -11,25 +11,30 @@ export default function Home() {
       <header>
         <div className='flex items-center justify-between h-16 before:block'>
           <div className='grow flex justify-between md:justify-end space-x-4'>
-            <Button variant='hoverable' className='px-2'>
+            <Button
+              variant='hoverable'
+              className='px-2'
+              aria-label='Toggle Dark Mode'
+            >
               <Sun />
             </Button>
-            <Button variant='hoverable'>Resume</Button>
+            <Button variant='hoverable' aria-label='Download Resume'>
+              Resume
+            </Button>
           </div>
         </div>
       </header>
 
       <section className='flex flex-col gap-4 lg:w-[700px] py-2 fadeIn'>
-        <figure className=' p-1 border-2 border-black rounded-2xl'>
+        <figure className='p-1 border-2 border-black rounded-2xl'>
           <Image
             src={bannerImage}
             placeholder='blur'
             alt='Me'
-            width={0}
-            height={0}
+            width={700}
+            height={300}
             priority={true}
-            sizes='(max-width: 700px) 100vw, 700px'
-            className='rounded-xl border-2 border-black object-cover h-[200px] sm:h-[300px] w-full object-top select-none'
+            className='rounded-xl border-2 border-black object-cover h-[300px] w-full object-top select-none'
           />
         </figure>
 
@@ -46,36 +51,37 @@ export default function Home() {
         </div>
 
         <div className='flex items-center gap-4'>
-          <Button variant='hoverable' className='px-2'>
+          <Button variant='hoverable' className='px-2' aria-label='Github Link'>
             <Image
               src='/logo/github.svg'
               alt='Github'
               width={26}
               height={26}
               priority={true}
-              className=''
             />
           </Button>
 
-          <Button variant='hoverable' className='px-2'>
+          <Button
+            variant='hoverable'
+            className='px-2'
+            aria-label='Linkedin Link'
+          >
             <Image
               src='/logo/linkedin.svg'
-              alt='Github'
+              alt='Linkedin'
               width={26}
               height={26}
               priority={true}
-              className=''
             />
           </Button>
 
-          <Button variant='hoverable' className='px-2'>
+          <Button variant='hoverable' className='px-2' aria-label='X Link'>
             <Image
               src='/logo/x_light.svg'
-              alt='Github'
+              alt='X'
               width={24}
               height={24}
               priority={true}
-              className=''
             />
           </Button>
         </div>
