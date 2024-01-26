@@ -1,7 +1,7 @@
 'use client';
 
 import { AppProgressBar as ProgressBar } from 'next-nprogress-bar';
-import { ReactNode } from 'react';
+import { ReactNode, Suspense } from 'react';
 
 interface ProvidersProps {
   children: ReactNode;
@@ -10,12 +10,14 @@ interface ProvidersProps {
 const Providers = ({ children }: ProvidersProps): JSX.Element => {
   return (
     <>
-      <ProgressBar
-        height='4px'
-        color='#000000'
-        options={{ showSpinner: false }}
-        shallowRouting
-      />
+      <Suspense fallback={null}>
+        <ProgressBar
+          height='4px'
+          color='#000000'
+          options={{ showSpinner: false }}
+          shallowRouting
+        />
+      </Suspense>
 
       {children}
     </>
