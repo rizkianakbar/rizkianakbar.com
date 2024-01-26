@@ -2,6 +2,45 @@
 @tailwind components;
 @tailwind utilities;
 
+/* styles/global.css */
+@font-face {
+  font-family: 'Walsheim';
+  src: url('/fonts/Walsheim-Bold.woff2') format('woff2');
+  font-weight: bold;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Walsheim';
+  src: url('/fonts/Walsheim-Light.woff2') format('woff2');
+  font-weight: 300;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Walsheim';
+  src: url('/fonts/Walsheim-Medium.woff2') format('woff2');
+  font-weight: 500;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Walsheim';
+  src: url('/fonts/Walsheim-Regular.woff2') format('woff2');
+  font-weight: normal;
+  font-display: swap;
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+    font-family: 'Walsheim', sans-serif;
+  }
+}
+
 @layer base {
   :root {
     --background: 0 0% 100%;
@@ -63,14 +102,5 @@
     --border: 217.2 32.6% 17.5%;
     --input: 217.2 32.6% 17.5%;
     --ring: 212.7 26.8% 83.9%;
-  }
-}
-
-@layer base {
-  * {
-    @apply border-border;
-  }
-  body {
-    @apply bg-background text-foreground;
   }
 }
