@@ -25,7 +25,7 @@ const SidebarImageLink: FC<SidebarImageLinkProps> = ({ href }) => (
         priority={true}
         placeholder='blur'
         sizes='(min-width: 768px) 64px, 48px'
-        className='rounded-xl border-2 border-black h-10 w-8'
+        className='rounded-xl border-2 border-black h-10 w-8 select-none'
       />
     </Link>
   </div>

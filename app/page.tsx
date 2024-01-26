@@ -29,7 +29,7 @@ export default function Home() {
             height={0}
             priority={true}
             sizes='(max-width: 700px) 100vw, 700px'
-            className='rounded-xl border-2 border-black object-cover h-[200px] sm:h-[300px] w-full object-top'
+            className='rounded-xl border-2 border-black object-cover h-[200px] sm:h-[300px] w-full object-top select-none'
           />
         </figure>
 
