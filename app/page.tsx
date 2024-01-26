@@ -1,14 +1,15 @@
-import { Sun } from 'lucide-react';
-import Image from 'next/image';
+// import { Sun } from 'lucide-react';
+// import Image from 'next/image';
 
-import { Button } from '@/components/ui/button';
+// import { Button } from '@/components/ui/button';
 
-import backgroundImage from '@/public/images/kian-conf.jpeg';
+// import backgroundImage from '@/public/images/kian-conf.jpeg';
 
 export default function Home() {
   return (
     <div className='w-full h-full max-w-[1072px] mx-auto flex flex-col'>
-      <header>
+      asd
+      {/* <header>
         <div className='flex items-center justify-between h-16 before:block'>
           <div className='grow flex justify-between md:justify-end space-x-4'>
             <Button variant='hoverable' className='px-2'>
@@ -79,7 +80,7 @@ export default function Home() {
             />
           </Button>
         </div>
-      </section>
+      </section> */}
     </div>
   );
 }
