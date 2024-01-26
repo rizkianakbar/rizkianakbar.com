@@ -3,7 +3,7 @@ import Image from 'next/image';
 
 import { Button } from '@/components/ui/button';
 
-import backgroundImage from '@/public/images/kian-conf.jpeg';
+import bannerImage from '@/public/images/kian-conf.jpeg';
 
 export default function Home() {
   return (
@@ -19,10 +19,10 @@ export default function Home() {
         </div>
       </header>
 
-      <section className='flex flex-col gap-4 lg:w-[700px] py-2'>
+      <section className='flex flex-col gap-4 lg:w-[700px] py-2 fadeIn'>
         <figure className=' p-1 border-2 border-black rounded-2xl'>
           <Image
-            src={backgroundImage}
+            src={bannerImage}
             placeholder='blur'
             alt='Me'
             width={0}

@@ -5,6 +5,8 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { FC } from 'react';
 
+import kianLogo from '@/public/images/kian.jpeg';
+
 type SidebarImageLinkProps = {
   href: string;
 };
@@ -16,12 +18,14 @@ const SidebarImageLink: FC<SidebarImageLinkProps> = ({ href }) => (
       className='p-1 border-2 border-black rounded-2xl hover:bg-[#B31312]'
     >
       <Image
-        src='/images/kian.jpeg'
-        alt='Me'
-        width={32}
-        height={32}
+        src={kianLogo}
+        alt='K I A N'
+        width={0}
+        height={0}
         priority={true}
-        className='rounded-xl border-2 border-black'
+        placeholder='blur'
+        sizes='(min-width: 768px) 64px, 48px'
+        className='rounded-xl border-2 border-black h-10 w-8'
       />
     </Link>
   </div>
