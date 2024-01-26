@@ -34,7 +34,7 @@ export default function Home() {
             width={700}
             height={300}
             priority={true}
-            className='rounded-xl border-2 border-black object-cover h-[300px] w-full object-top select-none'
+            className='rounded-xl border-2 border-black object-cover h-[200px] lg:h-[300px] w-full object-top select-none'
           />
         </figure>
 
