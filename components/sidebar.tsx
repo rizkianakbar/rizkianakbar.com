@@ -54,7 +54,7 @@ export default function Sidebar() {
                   className='w-full h-6 flex items-center justify-center relative after:absolute after:w-0.5 after:right-0 after:top-0 after:bottom-0 text-black'
                   href='/'
                 >
-                  <span className='sr-only'>Home</span>
+                  <span className='sr-only'>About</span>
 
                   <InfoIcon />
                 </Link>
