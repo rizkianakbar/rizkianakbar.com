@@ -2,139 +2,75 @@
 @tailwind components;
 @tailwind utilities;
 
-::selection {
-  background-color: #47a3f3;
-  color: #fefefe;
-}
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 222.2 84% 4.9%;
 
-html {
-  min-width: 360px;
-  scroll-behavior: smooth;
-}
+    --card: 0 0% 100%;
+    --card-foreground: 222.2 84% 4.9%;
 
-input,
-textarea,
-button,
-select,
-a {
-  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
-}
+    --popover: 0 0% 100%;
+    --popover-foreground: 222.2 84% 4.9%;
 
-#__next {
-  @apply bg-gray-50 dark:bg-gray-900;
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
-}
+    --primary: 222.2 47.4% 11.2%;
+    --primary-foreground: 210 40% 98%;
 
-/* https://seek-oss.github.io/capsize/ */
-.capsize::before {
-  content: '';
-  margin-bottom: -0.098em;
-  display: table;
-}
+    --secondary: 210 40% 96.1%;
+    --secondary-foreground: 222.2 47.4% 11.2%;
 
-.capsize::after {
-  content: '';
-  margin-top: -0.219em;
-  display: table;
-}
+    --muted: 210 40% 96.1%;
+    --muted-foreground: 215.4 16.3% 46.9%;
 
-.skip-nav {
-  @apply absolute px-4 py-3 transition-transform duration-200 transform -translate-y-12 -left-1/4 focus:top-4 focus:translate-y-3 -top-8;
-}
+    --accent: 210 40% 96.1%;
+    --accent-foreground: 222.2 47.4% 11.2%;
 
-#skip {
-  scroll-margin-top: 1.125rem;
-}
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
 
-pre::-webkit-scrollbar {
-  display: none;
-}
+    --border: 214.3 31.8% 91.4%;
+    --input: 214.3 31.8% 91.4%;
+    --ring: 222.2 84% 4.9%;
 
-pre {
-  -ms-overflow-style: none; /* IE and Edge */
-  scrollbar-width: none; /* Firefox */
-}
-
-/* Remove Safari input shadow on mobile */
-input[type='text'],
-input[type='email'] {
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-}
-
-[data-fade] {
-  @apply translate-y-10 opacity-0 transition duration-[400ms] ease-out motion-reduce:translate-y-0 motion-reduce:opacity-100;
-}
-.fade-in-start [data-fade] {
-  @apply translate-y-0 opacity-100;
-}
-.fade-in-start [data-fade='1'] {
-  transition-delay: 100ms;
-}
-.fade-in-start [data-fade='2'] {
-  transition-delay: 200ms;
-}
-.fade-in-start [data-fade='3'] {
-  transition-delay: 300ms;
-}
-.fade-in-start [data-fade='4'] {
-  transition-delay: 400ms;
-}
-.fade-in-start [data-fade='5'] {
-  transition-delay: 500ms;
-}
-.fade-in-start [data-fade='6'] {
-  transition-delay: 600ms;
-}
-.fade-in-start [data-fade='7'] {
-  transition-delay: 700ms;
-}
-.fade-in-start [data-fade='8'] {
-  transition-delay: 800ms;
-}
-
-.glow {
-  position: relative;
-  color: black !important;
-  border-radius: 3px;
-}
-
-.glow:before {
-  position: absolute;
-  content: '';
-  top: calc(-1 * 3px);
-  left: calc(-1 * 3px);
-  z-index: -1;
-  width: calc(100% + 3px * 2);
-  height: calc(100% + 3px * 2);
-  background: linear-gradient(
-    45deg,
-    hsl(224, 85%, 66%),
-    hsl(269, 85%, 66%),
-    hsl(314, 85%, 66%),
-    hsl(359, 85%, 66%),
-    hsl(44, 85%, 66%),
-    hsl(89, 85%, 66%),
-    hsl(134, 85%, 66%),
-    hsl(179, 85%, 66%)
-  );
-  background-size: 300% 300%;
-  background-position: 0 50%;
-  border-radius: calc(2 * 3px);
-  animation: moveGradient 4s alternate infinite;
-}
-
-@keyframes moveGradient {
-  0% {
-    background-position: 0 50%;
+    --radius: 0.5rem;
   }
-  50% {
-    background-position: 100% 50%;
+
+  .dark {
+    --background: 222.2 84% 4.9%;
+    --foreground: 210 40% 98%;
+
+    --card: 222.2 84% 4.9%;
+    --card-foreground: 210 40% 98%;
+
+    --popover: 222.2 84% 4.9%;
+    --popover-foreground: 210 40% 98%;
+
+    --primary: 210 40% 98%;
+    --primary-foreground: 222.2 47.4% 11.2%;
+
+    --secondary: 217.2 32.6% 17.5%;
+    --secondary-foreground: 210 40% 98%;
+
+    --muted: 217.2 32.6% 17.5%;
+    --muted-foreground: 215 20.2% 65.1%;
+
+    --accent: 217.2 32.6% 17.5%;
+    --accent-foreground: 210 40% 98%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 217.2 32.6% 17.5%;
+    --input: 217.2 32.6% 17.5%;
+    --ring: 212.7 26.8% 83.9%;
   }
-  100% {
-    background-position: 0 50%;
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
   }
 }
