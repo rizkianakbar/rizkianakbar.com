@@ -1,9 +1,34 @@
 import type { Metadata } from 'next';
+import localFont from 'next/font/local';
 
 import '../styles/globals.css';
 
+import { cn } from '@/lib/utils';
+
 import Providers from '@/components/providers';
 import Sidebar from '@/components/sidebar';
+
+const walsheimFont = localFont({
+  src: [
+    {
+      path: '../public/fonts/Walsheim-Light.woff2',
+      weight: '400',
+    },
+    {
+      path: '../public/fonts/Walsheim-Regular.woff2',
+      weight: '500',
+    },
+    {
+      path: '../public/fonts/Walsheim-Medium.woff2',
+      weight: '600',
+    },
+    {
+      path: '../public/fonts/Walsheim-Bold.woff2',
+      weight: '700',
+    },
+  ],
+  preload: true,
+});
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://rizkianakbar.com'),
@@ -44,17 +69,16 @@ export default function RootLayout({
 }>) {
   return (
     <html lang='en'>
-      <body className='antialiased bg-white text-slate-800 dark:bg-slate-900 dark:text-slate-200 tracking-tight'>
+      <body
+        className={cn(walsheimFont.className, 'antialiased relative tracking')}
+      >
         <Providers>
-          <div className='max-w-7xl mx-auto'>
-            <div className='min-h-screen flex relative'>
-              <Sidebar />
+          <div className='absolute inset-0 -z-10 h-full w-full bg-white bg-[radial-gradient(#e5e7eb_1px,transparent_1px)] [background-size:16px_16px]' />
 
-              <main className='grow overflow-hidden px-6'>
-                <div className='absolute inset-0 -z-10 h-full w-full bg-white bg-[radial-gradient(#e5e7eb_1px,transparent_1px)] [background-size:16px_16px]' />
-                {children}
-              </main>
-            </div>
+          <div className='max-w-7xl min-h-screen mx-auto flex relative'>
+            <Sidebar />
+
+            <main className='grow overflow-hidden px-6'>{children}</main>
           </div>
         </Providers>
       </body>
